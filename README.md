@@ -16,12 +16,12 @@ Implemented a Unix-like shell in C++ supporting foreground and background execut
 - Managed background jobs using internal job tables
 
 ## Example Output
-CPU time: 15 ms
-Elapsed time: 22 ms
-Voluntary context switches: 3
-Involuntary context switches: 1
-Major page faults: 0
-Minor page faults: 124
+-CPU time: 15 ms
+-Elapsed time: 22 ms
+-Voluntary context switches: 3
+-Involuntary context switches: 1
+-Major page faults: 0
+-Minor page faults: 124
 
 
 ## Tech Stack
