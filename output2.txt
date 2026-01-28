@@ -1,0 +1,106 @@
+Script started on 2026-01-27 02:31:05+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;student@csvm-ay2025-2026-utm-arm64-1: ~[01;32mstudent@csvm-ay2025-2026-utm-arm64-1[00m:[01;34m~[00m$ g++ doit.cpp -o doit
+[?2004l[?2004h]0;student@csvm-ay2025-2026-utm-arm64-1: ~[01;32mstudent@csvm-ay2025-2026-utm-arm64-1[00m:[01;34m~[00m$ ./doit ls -l
+[?2004ltotal 292
+drwxrwxr-x 2 student student  4096 Jan 13 01:05 cpp_practice
+drwxr-xr-x 2 student student  4096 Aug 26 00:25 Desktop
+drwxr-xr-x 2 student student  4096 Jan 17  2025 Documents
+-rwxrwxr-x 1 student student 68936 Jan 27 02:31 doit
+-rw-rw-r-- 1 student student  8367 Jan 27 02:29 doit.cpp
+drwxr-xr-x 2 student student  4096 Jan 17  2025 Downloads
+-rwxrwxr-x 1 student student 13720 Jan 21 00:59 fork_test
+-rw-rw-r-- 1 student student   527 Jan 21 00:59 fork_test.cpp
+-rwxrwxr-x 1 student student 13792 Jan 21 02:47 fork_with_arg
+-rw-rw-r-- 1 student student   653 Jan 21 02:47 fork_with_arg.cpp
+-rwxrwxr-x 1 student student  9488 Jan 21 00:29 hello
+-rw-rw-r-- 1 student student   101 Jan 19 15:56 hello.cpp
+-rw------- 1 student student     3 Jan 19 01:43 hello.cpp.save
+-rw------- 1 student student    52 Jan 19 01:44 hello.cpp.save.1
+-rw-rw-r-- 1 student student    12 Jan 26 05:45 HelloWorld.txt
+drwxr-xr-x 2 student student  4096 Jan 17  2025 Music
+-rwxrwxr-x 1 student student 13880 Jan 22 16:05 myexecvp
+-rw-rw-r-- 1 student student   476 Jan 23 00:11 myexecvp.cpp
+-rw-rw-r-- 1 student student  3649 Jan 26 23:45 output1.txt
+-rw-rw-r-- 1 student student     0 Jan 27 02:31 output2.txt
+-rw-rw-r-- 1 student student  3508 Jan 26 00:10 output.txt
+drwxr-xr-x 2 student student  4096 Jan 17  2025 Pictures
+drwxr-xr-x 2 student student  4096 Jan 17  2025 Public
+-rwxrwxr-x 1 student student 68848 Jan 25 23:53 sample
+-rw-rw-r-- 1 student student  4916 Jan 25 23:53 sample.cpp
+drwx------ 3 student student  4096 Jan 19 01:46 snap
+drwxrwxr-x 2 student student  4096 Jan 13 00:51 test
+drwxr-xr-x 2 student student  4096 Jan 17  2025 Videos
+
+-- Statistics --
+1. CPU time: 4 ms
+2. Elapsed time: 5 ms
+3. Involuntary preemptions: 51
+4. Voluntary context switches: 1
+5. Major page faults: 0
+6. Minor page faults: 117
+7. Maximum resident size used: 2384 kB
+[?2004h]0;student@csvm-ay2025-2026-utm-arm64-1: ~[01;32mstudent@csvm-ay2025-2026-utm-arm64-1[00m:[01;34m~[00m$ ./doit
+[?2004l==> ls
+cpp_practice  fork_test		 hello.cpp.save    output1.txt	sample.cpp
+Desktop       fork_test.cpp	 hello.cpp.save.1  output2.txt	snap
+Documents     fork_with_arg	 HelloWorld.txt    output.txt	test
+doit	      fork_with_arg.cpp  Music		   Pictures	Videos
+doit.cpp      hello		 myexecvp	   Public
+Downloads     hello.cpp		 myexecvp.cpp	   sample
+
+-- Statistics --
+1. CPU time: 2 ms
+2. Elapsed time: 2 ms
+3. Involuntary preemptions: 0
+4. Voluntary context switches: 1
+5. Major page faults: 0
+6. Minor page faults: 104
+7. Maximum resident size used: 1952 kB
+==> date
+Tue Jan 27 02:31:47 AM UTC 2026
+
+-- Statistics --
+1. CPU time: 2 ms
+2. Elapsed time: 4 ms
+3. Involuntary preemptions: 1
+4. Voluntary context switches: 3
+5. Major page faults: 3
+6. Minor page faults: 83
+7. Maximum resident size used: 1952 kB
+==> set prompt = myShell:
+myShell: cd ..
+myShell: ls
+student
+
+-- Statistics --
+1. CPU time: 5 ms
+2. Elapsed time: 7 ms
+3. Involuntary preemptions: 1
+4. Voluntary context switches: 2
+5. Major page faults: 0
+6. Minor page faults: 100
+7. Maximum resident size used: 1952 kB
+myShell: sleep 10 &
+[1] 16962
+myShell: jobs
+[1] 16962 sleep
+myShell: 
+
+[1] 16962 Completed
+
+-- Statistics --
+1. CPU time: 4 ms
+2. Elapsed time: 18352 ms
+3. Involuntary preemptions: 0
+4. Voluntary context switches: 5
+5. Major page faults: 2
+6. Minor page faults: 79
+7. Maximum resident size used: 1952 kB
+myShell: sleep 15 &
+[2] 16967
+myShell: exit
+Waiting for background jobs...
+[?2004h]0;student@csvm-ay2025-2026-utm-arm64-1: ~[01;32mstudent@csvm-ay2025-2026-utm-arm64-1[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2026-01-27 02:33:03+00:00 [COMMAND_EXIT_CODE="0"]
