@@ -27,12 +27,3 @@ Involuntary context switches: 1
 Major page faults: 0
 Minor page faults: 124
 
-
-
-## Tech Stack
-- C++
-- Linux
-- POSIX system calls (`fork`, `exec`, `wait`, `getrusage`)
-
-## Motivation
-This project was built to gain a deeper understanding of how operating systems manage processes, scheduling, and resource accounting at the system-call level.
