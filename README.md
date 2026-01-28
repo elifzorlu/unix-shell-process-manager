@@ -16,7 +16,6 @@ Implemented a Unix-like shell in C++ supporting foreground and background execut
 - Managed background jobs using internal job tables
 
 ## Example Output
-## Example Output
 
 ```text
 Statistics:
