@@ -1,28 +1,63 @@
-# Unix Shell with Process & Resource Management
+# C++ Micro-Shell (Systems Programming)
 
-Implemented a Unix-like shell in C++ supporting foreground and background execution, job tracking, and detailed resource usage reporting.
+A lightweight, Unix-like command-line interpreter implemented in C++. This project demonstrates low-level process control, resource accounting, and signal handling without relying on standard shell libraries.
 
-## Features
-- Executes external programs using `fork` and `exec`
-- Supports background jobs and job tracking
-- Measures CPU time (user + system), wall-clock time, and memory usage
-- Reports context switches and page faults using `getrusage`
-- Handles process synchronization with `wait` / `waitpid`
+The codebase follows a modular, object-oriented design that encapsulates shell state and job management for improved maintainability and memory safety.
 
-## Technical Highlights
-- Used low-level Linux system calls for process control
-- Implemented precise time measurement using `gettimeofday`
-- Tracked per-job resource consumption and execution statistics
-- Managed background jobs using internal job tables
+## ⚡ Core Systems Concepts
 
-## Example Output
+- **Process Management:** Uses the fork() + execvp() pattern to spawn and replace child processes.
+- **Resource Accounting:** Tracks CPU time, context switches, and page faults via getrusage().
+- **Asynchronous Execution:** Supports background jobs (&) using non-blocking waitpid(..., WNOHANG).
+- **Signal Handling:** Prevents zombie processes through active monitoring of child process state.
 
-```text
-Statistics:
-CPU time: 15 ms
-Elapsed time: 22 ms
-Voluntary context switches: 3
-Involuntary context switches: 1
-Major page faults: 0
-Minor page faults: 124
+## 📂 Project Structure
 
+    /Micro-Shell-Project
+    ├── include/       # Header files (interfaces)
+    ├── src/           # Source code (implementation)
+    ├── bin/           # Compiled executables
+    └── Makefile       # Automated build script
+
+## 🛠 Build & Run
+
+### Prerequisites
+
+- GCC/G++ (C++17 recommended)
+- Linux/Unix environment (or WSL on Windows)
+
+### Build & Execute
+
+    make
+    ./bin/microshell
+
+## 🚀 Features
+
+| Feature | Command | Description |
+|------|------|------|
+| Foreground execution | ls -la | Blocks until the process completes |
+| Background execution | sleep 10 & | Runs process asynchronously |
+| Process statistics | Automatic | Reports CPU and memory statistics |
+| Job listing | jobs | Displays active background jobs |
+| Built-in commands | cd, exit | Handled internally by the shell |
+
+## 💻 Sample Usage
+
+    ==> sleep 2 &
+    [1] 14052
+    ==> jobs
+    [1] 14052 sleep
+    ==>
+    [1] 14052 Completed
+
+    -- Statistics --
+    CPU time: 0 ms
+    Elapsed time: 2004 ms
+    Involuntary context switches: 2
+    Voluntary context switches: 11
+
+## 🚧 Optimization Roadmap
+
+- Pipe support using | and kernel pipes
+- I/O redirection with > and < via dup2()
+- Job control commands (fg, bg)
